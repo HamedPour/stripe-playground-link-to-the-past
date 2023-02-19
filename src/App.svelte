@@ -1,14 +1,25 @@
 <script lang="ts">
+    import CheckoutForm from "./components/CheckoutForm.svelte"
+
+
+    import {loadStripe} from "@stripe/stripe-js"
+    import {onMount} from "svelte"
+
+    let stripe = null
+
+
+    onMount(async () => {
+        stripe = await loadStripe(import.meta.env.VITE_STRIPE_PUBLIC_KEY)
+    })
+
+
 </script>
 
+
 <main>
-    <div class=" max-w-[80vw] mx-auto gap-4 h-screen flex flex-col justify-center ">
-        <h1 class="text-center mb-4 text-[#ae9338]">Zelda - A Link to the Past</h1>
-        <div class="nes-field is-inline">
-            <label for="inline_field">Field</label>
-            <input type="text" id="inline_field" class="nes-input " placeholder="NES.css">
-        </div>
-    </div>
+
+    <CheckoutForm {stripe} />
+
 </main>
 
 <style global>

@@ -5,17 +5,17 @@ export default {
     theme: {
         extend: {
             colors: {
-                "primary_green": "#145332",
-                "primary_light_green": "#28BFAE",
-                "sand": "#F9E3BA",
-                "orange": "#FF8E52",
-                "pink": "#FF2981",
-                "yellow": "#FFBF39",
-                "dark_pink": "#3F071E",
-                "dark_green": "#048F80"
+                "primary_gold": "#ab8f39",
+                "secondary_gold": "#e89d0e",
+                "zelda_red": "#fd380d",
+                "zelda_silver": "#c5b5b9",
+                "zelda_yellow": "#e89d0e",
+                "zelda_black": "#15140f"
+
+
             },
             fontFamily: {
-                raj: "Rajdhani, serif"
+                "Press2P": ["Press Start 2P"]
             }
         },
         variants: {
