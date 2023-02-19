@@ -1,38 +1,18 @@
 <script lang="ts">
-  import { onMount } from "svelte";
-
-  async function makePostRequest() {
-    try {
-      const response = await fetch(
-        "http://localhost:3000/create-checkout-session",
-        {
-          method: "POST",
-          headers: {
-            Accept: "application/json",
-            "Content-type": "application/json",
-          },
-          body: JSON.stringify({
-            items: [
-              { id: 1, qty: 3 },
-              { id: 2, qty: 5 },
-            ],
-          }),
-        }
-      );
-      if (response.ok) {
-        console.log("RES OKAY");
-        console.log("SHOW ME THE DATA", response);
-      }
-      //   const data = await response.json();
-    } catch (error) {
-      console.error("Error:", error);
-    }
-  }
 </script>
 
 <main>
-  <h1>What say you server?</h1>
-  <button class="btn btn-primary" on:click={makePostRequest}
-    >Make Post Request</button
-  >
+    <div class=" max-w-[80vw] mx-auto gap-4 h-screen flex flex-col justify-center ">
+        <h1 class="text-center mb-4 text-[#ae9338]">Zelda - A Link to the Past</h1>
+        <div class="nes-field is-inline">
+            <label for="inline_field">Field</label>
+            <input type="text" id="inline_field" class="nes-input " placeholder="NES.css">
+        </div>
+    </div>
 </main>
+
+<style global>
+    @tailwind utilities;
+    @tailwind components;
+    @tailwind base;
+</style>
